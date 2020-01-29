@@ -13,34 +13,23 @@ methods:
 //for inquirer UA Coding Bootcamp 01.23.20 9.3 time stamp 2:04:50
 
 
+
 const inquirer = require('inquirer')
 
 inquirer
-  .prompt({
-    message: "Enter Your Name",
-    name: "name"
-  })
-  .then(function (name) {
-    console.log(name)
-  })
-
-inquirer
-  .prompt({
-    message: "Enter Your ID Number",
-    id: "id"
-  })
-  .then(function (id) {
-    console.log(id)
+  .prompt([
+    {message: "Enter Your Name",
+    name: "name"},
+   {message: "Enter Your ID Number",
+    name: 'id'},
+    {message: "What is your title?",
+    name: 'title'
+    }
+  ])
+  .then(function () {
+    console.log()
   })
 
-inquirer
-  .prompt({
-    message: "Enter Your Title",
-    title: "title"
-  })
-  .then(function (Title) {
-    console.log(title)
-  })
 
 const newEmp = {
   name: "",
